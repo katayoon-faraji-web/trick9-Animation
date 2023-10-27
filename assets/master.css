@@ -1,0 +1,55 @@
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ff4814;
+  transform-style: preserve-3d;
+}
+body > .row {
+  width: 100%;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+body > .row > section {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > .row > section > svg {
+  width: 300px;
+  animation: anime1 3s ease-out infinite;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); */
+}
+body > .row > .shadow {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  transform: perspective(800px) rotateX(-80deg) translate(-50%, -50%);
+  background-color: rgba(63, 63, 63, 0.603);
+  position: absolute;
+  left: 50.4%;
+  top: 48%;
+  animation: anime2 3s ease-out infinite;
+}
+
+@keyframes anime1 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+@keyframes anime2 {
+  0%, 100% {
+    transform: perspective(800px) rotateX(-80deg) translate(-50%, -50%) scale(0.8);
+  }
+  50% {
+    transform: perspective(800px) rotateX(-80deg) translate(-50%, -50%) scale(0.5);
+  }
+}/*# sourceMappingURL=master.css.map */
